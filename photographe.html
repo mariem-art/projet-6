@@ -13,14 +13,15 @@
     </header>
     <main id="main">
       <div class="photograph-header" id="main_contact">
-        <div class="cordonnee-photograph">
+        <div class="photograph-profil">
+
         </div>
         <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
         <div class="image-photograph" id ="image-photograph"></div>
       </div>
       <section class="galery">
 
-       
+       <div class="select-container">
         <div class="tri">
           <label for="pet-select">Trier par:</label>
            <select name="tri-photograph" id="tri-photograph">
@@ -29,6 +30,10 @@
               <option value="Date">Date</option>
             </select>
         </div>
+      </div>
+      <div class="media-container">
+        
+      </div>
       </section>
       <div class="photographfooter">
       </div>
@@ -39,38 +44,11 @@
           <h2>Contactez-moi</h2>
           <img src="./images/close.svg" onclick="closeModal()" />
         </header>
-				<form id="contact-form">
-					<div>
-              <!--1/ PRENOM-->
-              <div class="formData">
-                <label for="first">Prénom*</label><br>
-                <input class="text-control" type="text" id="first" name="first" minlength="2" /><br>
-                <span class="error-message" id="first-error-message"></span><br>
-              </div>
-                 <!--2/ NOM-->
-            <div class="formData">
-              <label for="last">Nom*</label><br>
-              <input class="text-control" type="text" id="last" name="last" minlength="2" /><br>
-              <span class="error-message" id="last-error-message"></span><br>
-            </div>
-            <!--3/ EMAIL-->
-            <div class="formData">
-              <label for="email">E-mail*</label><br>
-              <input class="text-control" type="email" id="email" name="email"/><br>
-              <span class="error-message" id="email-error-message"></span><br>
-              
-            </div>
-            <div class="formData">
-            <label>Votre message*</label>
-            <input class="text-control" type="text" id="message" name="message"/><br>
-            <span class="error-message" id="message-error-message"></span><br>
-					</div>
-          <button class="contact_Envoyer">Envoyer</button>
-				</form>
+			
 			</div>
 		</div>
+    <script src="./scripts/templats/photographer.js"></script>
     <script src="./scripts/pages/photographier.js"></script>
-    <script src="./scripts/pages/factoris/photographer.js"></script>
     <script src="./scripts/utils/contactForm.js"></script>
     <script src="./scripts/utils/tri.js"></script>
     <script src="./scripts/pages/index.js"></script>
