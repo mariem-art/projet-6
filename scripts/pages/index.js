@@ -1,17 +1,21 @@
+
+//récupérer les données de fihier joson
 async function getPhotographers() {
-    try {
+  try {
       const response = await fetch('/photographers.json');
-      if (response.ok) {
-        const data = await response.json();
-        return { photographers: data.photographers };
-    }
-  } catch (error) {
-    console.error(error);
-  }
+       if (response.ok) {
+         const data = await response.json();
+         return { photographers: data.photographers };
+        }
+      } catch (error) {
+         console.error(error);
+        }
 }
 
+//let photographerTemplate=[];
+
     async function displayData(photographers) {
-        const photographersSection = document.querySelector(".photographer_section a");
+        const photographersSection = document.querySelector(".photographer_section");
         photographers.forEach((photographer) => {
             const photographerModel = photographerTemplate(photographer);
             const userCardDOM = photographerModel.getUserCardDOM();
