@@ -18,11 +18,13 @@ fetch("photographers.json").then(reponse => reponse.json().then(photographes => 
         //photographe.getHeaderPhotographer();
         const photographerModel = photographerTemplate(photographe);
         const userCardDOM = photographerModel.getHeaderPhotographer();
+            //console.log(photographerModel);
+            photograph-profil.appendChild(userCardPoto);
+      
       }
     })
 })
 );
-
     function getHeaderPhotographer() {
         const divDetails = document.createElement('div');
         divDetails.classList.add('photograph-profil');
@@ -32,18 +34,13 @@ fetch("photographers.json").then(reponse => reponse.json().then(photographes => 
 
          const h1= document.createElement('h1');
          h1.textContent= name;
-
        //crée pays
          const h3 = document.createElement( 'h4' );
          h3.textContent = city +","+ country ;
-
-
           //crée sous titre
         const h4 = document.createElement( 'h3' );
         h4.textContent = tagline;
-       
       // Structure les éléments
-
          article.appendChild(h1);
          article.appendChild(h4);
          article.appendChild(h3);
